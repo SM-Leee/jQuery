@@ -9,11 +9,29 @@
 <script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 <script type="text/javascript">
 $(function(){
-	$("#p1").html( "<strong>가나다라마바사아자차카타라하</strong>" );
+	setTimeout(function(){
+		$("#p1").html( "<strong>가나다라마바사아자차카타라하</strong>" );
+		
+		//1. 데이터 가져오기
+		// ajax...
+		
+		//2. html을 만드는작업을 해야된다. ( rendering )
+		var htmls4 = "<li>"+"메세지4"+"</li>";
+		var htmls0 = "<li>"+"메세지0"+"</li>";
+		
+		//3. 추가작업
+		$("#gb-list").append(htmls4);	//뒤에 취가
+		$("#gb-list").prepend(htmls0);	//앞에 추가
+	},1000);
 });
 </script>
 </head>
 <body>
 	<p id="p1"> 이 안에 HTML를 바꿉니다.</p>
+	<ul id="gb-list">
+		<li>메세지1</li>
+		<li>메세지2</li>
+		<li>메세지3</li>
+	</ul>
 </body>
 </html>

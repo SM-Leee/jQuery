@@ -9,7 +9,25 @@
 		<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 		<script type="text/javascript">
 		$(function(){
-			$("#first").css("color","red");
+			setTimeout(function(){
+				$("#first").css("color","red");
+				$("#fourth").css("color","green");
+				
+				//var $third = $("#third");
+				//$third.css("color","#0f0");
+				//$third.css("fontWeight", "bold");
+				$("#third").css({
+					color : "#0f0",
+					fontWeight : "bold"
+				});
+				
+				// 모든 jQuery API 함수들은 jQuery Object를 다시 반환한다.
+				console.log($("#third").css("color","#f00"));
+				
+				// 따라서 함수 체인을 사용할 수 있다.
+				$("#second").css("color","#00f").css("font-weight","bold").html("<strong>hello!</strong>");
+				
+			},1000);
 		});
 		</script>
 	</head>
