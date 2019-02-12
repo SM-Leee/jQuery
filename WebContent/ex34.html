@@ -5,13 +5,27 @@
 <script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 <script type="text/javascript">
 	$( function() {
-		/* 코드를 완성하세요 */
+		// a tag에 속성들을 추가할때 사용된다.
+		$("h1 a").attr({
+			"href": "http://www.naver.com",
+			"target":"_blank",
+			"title":"네이버로가시오"
+		});
+		
+		//의사 css 변경해주기
+		$("a:link, a:visited, a:active, a:hover").css({
+			"textDecoration":"none",
+			"color":"#333",
+			"fontSize":"0.75em"
+		});
+		
+		console.log($("h1 a").attr("href"));	//read(읽기)
 } );  
 </script>
 </head>
 <body>
 
-<h1><a href="http://www.smu.ac.kr" target="_blnk" title="우리학교 홈페이지 가기">홈페이지 가기</a></h1>
+<h1><a>홈페이지 가기</a></h1>
 
 </body>
 </html>

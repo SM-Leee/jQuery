@@ -4,8 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 <script type="text/javascript">
-	$( function() {
-		/* 코드를 완성하세요 */
+$( function() {
+	setTimeout(function(){
+		$(".d1").wrap("<h1>");
+		
+		// em tag의 margin이 밀어준다.
+		//$(".d2").wrap("<h2>").css("marginLeft","20px");
+		
+		// 부모 (parent를 구해서 h2의 margin을 밀어준다.)
+		$(".d2").wrap("<h2>").parent().css("marginLeft","20px");
+	},1000);	
 } );  
 </script>
 </head>

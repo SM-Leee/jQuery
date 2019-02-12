@@ -5,8 +5,10 @@
 <script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 <script type="text/javascript">
 	$( function() {
-	
-		/* 코드를 완성하세요 */
+		//remove 지정된 태그들을 제거하는 함수는 많이 사용된다.
+		setTimeout(function(){
+			$("li:nth-child(3), li:nth-child(5)").remove();
+		},1000);
 	} );  
 </script>
 </head>
